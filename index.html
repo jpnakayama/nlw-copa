@@ -24,55 +24,61 @@
         </label>
       </div>
 
-      <div class="filtro">
-        <select id="select_team" onchange="filtraPais()" type="text" name="filter_team" placeholder="Filtrar país">
-          <option value="">Escolha um país</option>
-          <option value="germany">Alemanha</option>
-          <option value="saudi arabia">Arábia Saudita</option>
-          <option value="argentina">Argentina</option>
-          <option value="australia">Austrália</option>
-          <option value="belgium">Bélgica</option>
-          <option value="brazil">Brasil</option>
-          <option value="cameroon">Camarões</option>
-          <option value="canada">Canada</option>
-          <option value="south korea">Coréia do Sul</option>
-          <option value="costa rica">Costa Rica</option>
-          <option value="croatia">Croácia</option>
-          <option value="denmark">Dinamarca</option>
-          <option value="ecuador">Equador</option>
-          <option value="spain">Espanha</option>
-          <option value="united states">EUA</option>
-          <option value="france">França</option>
-          <option value="ghana">Gana</option>
-          <option value="netherlands">Holanda</option>
-          <option value="england">Inglaterra</option>
-          <option value="iran">Irã</option>
-          <option value="japan">Japão</option>
-          <option value="morocco">Marrocos</option>
-          <option value="mexico">México</option>
-          <option value="wales">País de Gales</option>
-          <option value="poland">Polônia</option>
-          <option value="portugal">Portugal</option>
-          <option value="qatar">Qatar</option>
-          <option value="senegal">Senegal</option>
-          <option value="serbia">Sérvia</option>
-          <option value="switzerland">Suíça</option>
-          <option value="tunisia">Tunísia</option>
-          <option value="uruguay">Uruguai</option>
-        </select>
-        <select id="select_pool" onchange="filtraGrupo()" type="text" name="filter_pool" placeholder="Filtrar grupo">
-          <option value="">Escolha um grupo</option>
-          <option value="grupo a">GRUPO A</option>
-          <option value="grupo b">GRUPO B</option>
-          <option value="grupo c">GRUPO C</option>
-          <option value="grupo d">GRUPO D</option>
-          <option value="grupo e">GRUPO E</option>
-          <option value="grupo f">GRUPO F</option>
-          <option value="grupo g">GRUPO G</option>
-          <option value="grupo h">GRUPO H</option>
-        </select>
-        <button class="botao_filtrar" onclick="window.location.reload(true)">Limpa</button>
-      </div>
+      <form class="filtro">
+        <div class="filtro-pais">
+          <label class="label-filtro" for="select_team">Filtrar por pais</label>
+          <select id="select_team" onchange="filtraPais()" type="text" name="filter_team">
+            <option value="">Todos os países</option>
+            <option value="" hidden>Mostrar todos</option>
+            <option value="germany">Alemanha</option>
+            <option value="saudi arabia">Arábia Saudita</option>
+            <option value="argentina">Argentina</option>
+            <option value="australia">Austrália</option>
+            <option value="belgium">Bélgica</option>
+            <option value="brazil">Brasil</option>
+            <option value="cameroon">Camarões</option>
+            <option value="canada">Canada</option>
+            <option value="south korea">Coréia do Sul</option>
+            <option value="costa rica">Costa Rica</option>
+            <option value="croatia">Croácia</option>
+            <option value="denmark">Dinamarca</option>
+            <option value="ecuador">Equador</option>
+            <option value="spain">Espanha</option>
+            <option value="united states">EUA</option>
+            <option value="france">França</option>
+            <option value="ghana">Gana</option>
+            <option value="netherlands">Holanda</option>
+            <option value="england">Inglaterra</option>
+            <option value="iran">Irã</option>
+            <option value="japan">Japão</option>
+            <option value="morocco">Marrocos</option>
+            <option value="mexico">México</option>
+            <option value="wales">País de Gales</option>
+            <option value="poland">Polônia</option>
+            <option value="portugal">Portugal</option>
+            <option value="qatar">Qatar</option>
+            <option value="senegal">Senegal</option>
+            <option value="serbia">Sérvia</option>
+            <option value="switzerland">Suíça</option>
+            <option value="tunisia">Tunísia</option>
+            <option value="uruguay">Uruguai</option>
+          </select>
+        </div>
+        <div class="filtro-grupo">
+          <label class="label-filtro" for="select_pool">Filtrar por grupo</label>
+          <select id="select_pool" onchange="filtraGrupo()" type="text" name="filter_pool">
+            <option value="">Todos os grupos</option>
+            <option value="grupo a">GRUPO A</option>
+            <option value="grupo b">GRUPO B</option>
+            <option value="grupo c">GRUPO C</option>
+            <option value="grupo d">GRUPO D</option>
+            <option value="grupo e">GRUPO E</option>
+            <option value="grupo f">GRUPO F</option>
+            <option value="grupo g">GRUPO G</option>
+            <option value="grupo h">GRUPO H</option>
+          </select>
+        </div>
+      </form>
     </header>
   
     <main id="cards"></main>

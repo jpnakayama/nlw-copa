@@ -6,6 +6,7 @@
   list-style: none;
 
   font-family: 'Roboto', sans-serif;
+
 }
 
 :root {
@@ -36,6 +37,20 @@ header {
   align-items: center;
 
   gap: 20px;
+}
+
+.filtro-pais, .filtro-grupo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 80%;
+  align-items: center;
+  justify-items: start
+}
+
+.label-filtro {
+  font-size: 0.70rem;
+  color: #E1E1E6;
+  padding: 0
 }
 
 #select_team, #select_pool {
@@ -154,14 +169,6 @@ body {
   padding: 12px
 }
 
-.list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 12px
-}
-
 /*Só vai aplicar esse estilo caso haja mais de um item na lista
 .card ul li + li {
   border-top: 1px solid #323238;
@@ -195,15 +202,25 @@ body {
     flex-direction: row;
     flex-wrap: wrap
   }
+
+  .filtro-pais, .filtro-grupo {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    width: 80%;
+    align-items: center;
+    justify-items: start
+  }
 }
 
 .liga_desliga {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   gap: 20px;
 
+  font-size: 0.75rem;
+  font-weight: 700;
   color: #E1E1E6
 }
 /* The switch - the box around the slider */

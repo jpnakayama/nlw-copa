@@ -33,7 +33,7 @@ function filtraPais() {
         lista_jogos[i].style.display="none";
       }
       else {
-        lista_jogos[i].style.display="card";
+        lista_jogos[i].style.display="block";
       }
   }
 
@@ -42,7 +42,7 @@ function filtraPais() {
       jogos_do_dia[i].style.display="none";
     }
     else {
-      jogos_do_dia[i].style.display="jogos";    
+      jogos_do_dia[i].style.display="flex";    
     }
   }
 }
@@ -57,7 +57,7 @@ function filtraGrupo() {
       lista_jogos[i].style.display="none";
     }
     else {
-      lista_jogos[i].style.display="card";
+      lista_jogos[i].style.display="block";
     }
    }
 
@@ -66,10 +66,10 @@ function filtraGrupo() {
       jogos_grupo[i].style.display="none";
     }
     else {
-      jogos_grupo[i].style.display="jogo";    
+      jogos_grupo[i].style.display="flex";    
     }
   }
- }
+}
 
 document.querySelector("#cards").innerHTML = 
   createCard('20/11', 'domingo', 
