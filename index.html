@@ -25,7 +25,7 @@
       </div>
 
       <div class="filtro">
-        <select id="select_team" onmouseout="filtraPais()" type="text" name="filter_team" placeholder="Filtrar país">
+        <select id="select_team" onchange="filtraPais()" type="text" name="filter_team" placeholder="Filtrar país">
           <option value="">Escolha um país</option>
           <option value="germany">Alemanha</option>
           <option value="saudi arabia">Arábia Saudita</option>
@@ -60,7 +60,7 @@
           <option value="tunisia">Tunísia</option>
           <option value="uruguay">Uruguai</option>
         </select>
-        <select id="select_pool" onclick="filtraGrupo()" type="text" name="filter_pool" placeholder="Filtrar grupo">
+        <select id="select_pool" onchange="filtraGrupo()" type="text" name="filter_pool" placeholder="Filtrar grupo">
           <option value="">Escolha um grupo</option>
           <option value="grupo a">GRUPO A</option>
           <option value="grupo b">GRUPO B</option>
