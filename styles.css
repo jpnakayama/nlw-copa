@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  list-style: none;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --card-bg-color: #1D1C19;
+  --card-color-primary: #F7DD43;
+  --card-border-color: #746615
+}
+
+
+#app {
+  width: fit-content;
+  margin: 52px auto
+}
+
+header {
+  margin-bottom: 52px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.filtro {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+#select_team, #select_pool {
+  display: block;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid var(--card-border-color);
+  
+  background-color: transparent;
+  color: var(--card-color-primary);
+
+  width: 100%;
+  font-size: 1rem;
+}
+
+.botao_filtrar {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 1px solid var(--card-border-color);
+  color: var(--card-color-primary);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.botao_filtrar:hover {
+  color: #000;
+  outline: 0;
+}
+
+.botao_filtrar {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.botao_filtrar:hover {
+  box-shadow: 0 0 40px 40px var(--card-color-primary) inset;
+}
+
+body {
+  background-color: #121214;
+  background-image: url(./assets/bg.svg);
+  background-position-x: center;
+  background-position-y: 55%;
+}
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 36px;
+}
+
+.card {
+  padding: 32px 23px;
+  text-align: center;
+  background: var(--card-bg-color);
+  border-bottom: 2px solid var(--card-color-primary);
+  border-radius: 6px;
+}
+
+.card h2 {
+  display: flex;
+  gap: 16px;
+  align-items:center;
+  justify-content: center;
+  
+  padding: 8px 16px;
+  border: 1px solid var(--card-border-color);
+  border-radius: 6px;
+
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 53px;
+  
+  color: #F7DD43;
+  font-size: 24px;
+  font-weight: bold
+}
+
+.card h2 span {
+  color: #E1E1E6;
+  font-size: 14px;
+  font-weight: 700;
+
+  text-transform: uppercase
+}
+
+.card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 270px
+}
+
+.card ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px
+}
+
+/*Só vai aplicar esse estilo caso haja mais de um item na lista
+.card ul li + li {
+  border-top: 1px solid #323238;
+  padding-top: 24px
+}*/
+
+.grupo {
+  color: #C0C0C0;
+  text-transform: uppercase;
+  font-size: 10px;
+  
+  padding-bottom: 3px;
+}
+
+.horario {
+  color: #C0C0C0;
+  font-size: 28px;
+  font-weight: 700;
+
+  padding-top: 3px
+}
+
+.rodape {
+  text-align: center;
+  margin-top: 52px;
+}
+
+@media (min-width: 700px) {
+  #cards{
+    max-width: 670px;
+    flex-direction: row;
+    flex-wrap: wrap
+  }
+}
+
+.liga_desliga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  color: #E1E1E6
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--card-color-primary);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--card-color-primary);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

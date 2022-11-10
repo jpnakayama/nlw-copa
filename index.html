@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/logo-catar.svg" type="image/x-icon" />
+  <title>Calendário de jogos</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <img src="./assets/logo-copa.svg" alt="logo copa">
+      <div class="liga_desliga">
+        <span>FILTROS</span>
+        <label class="switch" onchange="exibeOculta()">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="filtro">
+        <select id="select_team" onclick="filtraPais()" type="text" name="filter_team" placeholder="Filtrar país">
+          <option value="">Escolha um país</option>
+          <option value="germany">Alemanha</option>
+          <option value="saudi arabia">Arábia Saudita</option>
+          <option value="argentina">Argentina</option>
+          <option value="australia">Austrália</option>
+          <option value="belgium">Bélgica</option>
+          <option value="brazil">Brasil</option>
+          <option value="cameroon">Camarões</option>
+          <option value="canada">Canada</option>
+          <option value="south korea">Coréia do Sul</option>
+          <option value="costa rica">Costa Rica</option>
+          <option value="croatia">Croácia</option>
+          <option value="denmark">Dinamarca</option>
+          <option value="ecuador">Equador</option>
+          <option value="spain">Espanha</option>
+          <option value="united states">EUA</option>
+          <option value="france">França</option>
+          <option value="ghana">Gana</option>
+          <option value="netherlands">Holanda</option>
+          <option value="england">Inglaterra</option>
+          <option value="iran">Irã</option>
+          <option value="japan">Japão</option>
+          <option value="morocco">Marrocos</option>
+          <option value="mexico">México</option>
+          <option value="wales">País de Gales</option>
+          <option value="poland">Polônia</option>
+          <option value="portugal">Portugal</option>
+          <option value="qatar">Qatar</option>
+          <option value="senegal">Senegal</option>
+          <option value="serbia">Sérvia</option>
+          <option value="switzerland">Suíça</option>
+          <option value="tunisia">Tunísia</option>
+          <option value="uruguay">Uruguai</option>
+        </select>
+        <select id="select_pool" onclick="filtraGrupo()" type="text" name="filter_pool" placeholder="Filtrar grupo">
+          <option value="">Escolha um grupo</option>
+          <option value="grupo a">GRUPO A</option>
+          <option value="grupo b">GRUPO B</option>
+          <option value="grupo c">GRUPO C</option>
+          <option value="grupo d">GRUPO D</option>
+          <option value="grupo e">GRUPO E</option>
+          <option value="grupo f">GRUPO F</option>
+          <option value="grupo g">GRUPO G</option>
+          <option value="grupo h">GRUPO H</option>
+        </select>
+        <button class="botao_filtrar" onclick="window.location.reload(true)">Limpa</button>
+      </div>
+    </header>
+  
+    <main id="cards"></main>
+ 
+    <footer class="rodape">
+      <img src="./assets/logo.svg" alt="">
+    </footer>
+  </div>
+
+  <script src="./main.js"></script>
+
+</body>
+</html>
